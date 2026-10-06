@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - Student Feedback</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="admin-container">
+
+        <!-- Header -->
+        <div class="admin-header">
+            <div>
+                <h1>Admin Dashboard</h1>
+                <p>Student Feedback Management System</p>
+            </div>
+
+            <a href="/" class="home-button">Student Form</a>
+        </div>
+
+
+        <!-- Statistics -->
+        <div class="stats-container">
+
+            <div class="stat-card">
+                <h3>Total Feedback</h3>
+                <p id="totalFeedback">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Overall Average</h3>
+                <p id="overallAverage">0.00 ⭐</p>
+            </div>
+
+        </div>
+
+
+        <!-- Search and Filter -->
+        <div class="filter-section">
+
+            <div>
+                <label for="registerSearch">
+                    Search by Register Number
+                </label>
+
+                <input
+                    type="text"
+                    id="registerSearch"
+                    placeholder="Enter register number"
+                >
+            </div>
+
+
+            <div>
+                <label for="courseFilter">
+                    Filter by Course
+                </label>
+
+                <input
+                    type="text"
+                    id="courseFilter"
+                    placeholder="Enter course name"
+                >
+            </div>
+
+
+            <button onclick="loadFeedback()">
+                Search / Filter
+            </button>
+
+            <button onclick="clearFilters()" class="clear-button">
+                Clear
+            </button>
+
+        </div>
+
+
+        <!-- Faculty Average -->
+        <div class="faculty-section">
+
+            <h2>Faculty Average Rating</h2>
+
+            <div class="faculty-search">
+
+                <input
+                    type="text"
+                    id="facultySearch"
+                    placeholder="Enter faculty name"
+                >
+
+                <button onclick="getFacultyAverage()">
+                    Calculate Average
+                </button>
+
+            </div>
+
+            <p id="facultyResult"></p>
+
+        </div>
+
+
+        <!-- Feedback Table -->
+        <div class="table-section">
+
+            <h2>All Student Feedback</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Student</th>
+                            <th>Register No</th>
+                            <th>Department</th>
+                            <th>Course</th>
+                            <th>Faculty</th>
+                            <th>Rating</th>
+                            <th>Comments</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="feedbackTableBody">
+
+                        <tr>
+                            <td colspan="8">
+                                Loading feedback...
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

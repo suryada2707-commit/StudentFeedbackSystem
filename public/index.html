@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>Student Feedback System</h1>
+            <p>Share your feedback about the course and faculty</p>
+        </div>
+
+        <form id="feedbackForm">
+
+            <div class="form-group">
+                <label for="studentName">Student Name</label>
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Enter your name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="registerNo">Register Number</label>
+                <input
+                    type="text"
+                    id="registerNo"
+                    placeholder="Enter register number"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="department">Department</label>
+                <select id="department" required>
+                    <option value="">Select Department</option>
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="Computer Science Engineering">Computer Science Engineering</option>
+                    <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
+                    <option value="Electrical and Electronics Engineering">Electrical and Electronics Engineering</option>
+                    <option value="Mechanical Engineering">Mechanical Engineering</option>
+                    <option value="Civil Engineering">Civil Engineering</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="course">Course Name</label>
+                <input
+                    type="text"
+                    id="course"
+                    placeholder="Enter course name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="faculty">Faculty Name</label>
+                <input
+                    type="text"
+                    id="faculty"
+                    placeholder="Enter faculty name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label>Rating</label>
+
+                <div class="rating">
+                    <input type="radio" name="rating" value="5" id="star5">
+                    <label for="star5">★</label>
+
+                    <input type="radio" name="rating" value="4" id="star4">
+                    <label for="star4">★</label>
+
+                    <input type="radio" name="rating" value="3" id="star3">
+                    <label for="star3">★</label>
+
+                    <input type="radio" name="rating" value="2" id="star2">
+                    <label for="star2">★</label>
+
+                    <input type="radio" name="rating" value="1" id="star1">
+                    <label for="star1">★</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Comments</label>
+                <textarea
+                    id="comments"
+                    rows="5"
+                    placeholder="Write your feedback..."
+                    required
+                ></textarea>
+            </div>
+
+            <button type="submit">Submit Feedback</button>
+
+            <p id="message"></p>
+
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
